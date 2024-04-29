@@ -4,7 +4,8 @@ import joblib
 from flask import Flask
 from flask_restx import Api, Resource, fields
 from predict_model import predict
-#from flask_cors import CORS
+from flask_cors import CORS
+from flask_cors import cross_origin
 
 # Definición aplicación Flask
 app = Flask(__name__)
@@ -34,6 +35,8 @@ resource_fields = api.model('Resource', {
 })
 
 @ns.route('/')
+@app.route('/', methods=['GET'])
+@cross_origin()
 class UsedCarPriceApi(Resource):
 
     @api.doc(parser=parser)
