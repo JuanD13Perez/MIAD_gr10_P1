@@ -4,7 +4,7 @@ os.chdir('..')
 import joblib
 from flask import Flask
 from flask_restx import Api, Resource, fields
-from model_deployment.predict_model import predict
+from model_deployment2.predict_model import predict
 from flask_cors import CORS
 
 # Definición aplicación Flask
