@@ -1,3 +1,6 @@
+import os
+os.chdir('..')
+
 import joblib
 from flask import Flask
 from flask_restx import Api, Resource, fields
