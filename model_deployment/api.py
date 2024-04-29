@@ -4,11 +4,11 @@ import joblib
 from flask import Flask
 from flask_restx import Api, Resource, fields
 from predict_model import predict
-from flask_cors import CORS
+#from flask_cors import CORS
 
 # Definición aplicación Flask
 app = Flask(__name__)
-CORS(app)
+#CORS(app)
 
 # Definición API Flask
 api = Api(
